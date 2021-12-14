@@ -3,7 +3,7 @@ import { IObject } from "../abstract/iobject";
 import { IStorageManager } from "./istorage-manager";
 
 export class JsonStorage implements IStorageManager {
-    _dir: string = 'storage';
+    private _dir: string = 'storage';
     
     exists(obj: IObject): boolean {
         const itExists = fs.existsSync(`${this._dir}/${obj.id}.json`);
