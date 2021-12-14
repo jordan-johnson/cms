@@ -12,7 +12,7 @@ describe('Text input validation', () => {
     });
 
     test('throws exception if text value exceeds maximum length', () => {
-        let stateInput = person.fields.find((x) => x.name == 'state');
+        let stateInput = person.fields.find((x) => x.name === 'state');
 
         if(stateInput === undefined) {
             throw new Error('State input undefined or not found in fields array');
