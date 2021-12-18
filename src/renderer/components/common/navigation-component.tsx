@@ -1,22 +1,29 @@
+import { Link } from 'react-router-dom';
+
 const NavigationComponent = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
         <ul className="navbar-nav me-auto">
           <li className="nav-item">
-            <a className="nav-link active" href="index.html">
+            <Link to="/" className="nav-link">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="index.html">
+            <Link to="/objects" className="nav-link">
               Objects
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="index.html">
+            <Link to="/settings" className="nav-link">
+              Settings
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/help" className="nav-link">
               Help
-            </a>
+            </Link>
           </li>
         </ul>
         <form className="d-flex">
