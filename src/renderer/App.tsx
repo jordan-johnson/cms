@@ -1,5 +1,5 @@
 import { MemoryRouter as Router, Switch, Route } from 'react-router-dom';
-import HomeComponent from './components/pages/home-component';
+import HomePage from './components/pages/home/home';
 import './App.css';
 import './bootstrap.min.css';
 import NavigationComponent from './components/common/navigation-component';
@@ -13,7 +13,7 @@ export default function App() {
       <Switch>
         <div>
           <NavigationComponent />
-          <Route exact path="/" component={HomeComponent} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/objects" component={ObjectsPage} />
           <Route path="/settings" component={SettingsPage} />
           <Route path="/help" component={HelpPage} />

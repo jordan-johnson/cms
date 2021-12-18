@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-const HomeComponent = () => {
+const HomePage = () => {
   const objectNameInput = React.createRef<HTMLInputElement>();
   const history = useHistory();
 
@@ -45,4 +45,4 @@ const HomeComponent = () => {
   );
 };
 
-export default HomeComponent;
+export default HomePage;
