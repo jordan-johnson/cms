@@ -8,3 +8,19 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.content {
+  margin-top: 1rem;
+}
+
+  .content .font-italic {
+    font-style: italic;
+  }
+
+  .content h4 {
+    margin-top: 2rem;
+  }
+
+  .content .button-section {
+    margin-top: 2rem;
+  }
