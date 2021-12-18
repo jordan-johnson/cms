@@ -1,7 +1,7 @@
-import { IField } from "./ifield";
+import { IField } from './ifield';
 
 export interface IObject {
-    id: number;
-    name: string;
-    fields: IField[];
+  id: number;
+  name: string;
+  fields: IField[];
 }
