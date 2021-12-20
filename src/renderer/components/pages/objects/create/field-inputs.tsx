@@ -1,4 +1,4 @@
-import { IFieldPairing } from './ifield-pairing';
+import { IFieldPairing } from '../common/ifield-pairing';
 
 interface IFieldInputsProperties {
   index: number;

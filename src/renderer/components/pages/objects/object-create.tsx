@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import FieldsSection from './fields-section';
-import { IFieldPairing } from './ifield-pairing';
-import ObjectNameSection from './object-name-section';
+import FieldsSection from './create/fields-section';
+import { IFieldPairing } from './common/ifield-pairing';
+import ObjectNameSection from './create/object-name-section';
 
 const ObjectCreatePage: FC = () => {
   const { name } = useParams<{ name?: string }>();

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import FieldInputs from './field-inputs';
-import { IFieldPairing } from './ifield-pairing';
+import { IFieldPairing } from '../common/ifield-pairing';
 
 interface IFieldsSectionProperties {
   fields: IFieldPairing[];

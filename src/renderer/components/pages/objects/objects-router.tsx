@@ -2,7 +2,7 @@ import { Route, Switch } from 'react-router';
 import ObjectCreatePage from './object-create';
 import ObjectDetailPage from './object-detail';
 
-const ObjectsPage = () => {
+const ObjectsRouter = () => {
   return (
     <>
       <Switch>
@@ -13,4 +13,4 @@ const ObjectsPage = () => {
   );
 };
 
-export default ObjectsPage;
+export default ObjectsRouter;
