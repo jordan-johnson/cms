@@ -11,13 +11,13 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <div>
+        <>
           <NavigationComponent />
           <Route exact path="/" component={HomePage} />
           <Route path="/objects" component={ObjectsPage} />
           <Route path="/settings" component={SettingsPage} />
           <Route path="/help" component={HelpPage} />
-        </div>
+        </>
       </Switch>
     </Router>
   );
