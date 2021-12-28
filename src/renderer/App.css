@@ -3,8 +3,7 @@ a {
 }
 
 .centered-body {
-  height: 90vh;
-  display: flex;
+  margin-top: 40vh;
   justify-content: center;
   align-items: center;
 }
