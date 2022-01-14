@@ -9,7 +9,7 @@ class ObjectRepository implements IRepository<CMSObject> {
         this._objects = [];
     }
 
-    public async getAll(): Promise<CMSObject[]> {
+    async getAll(): Promise<CMSObject[]> {
         const results = await SqliteService.all<CMSObject>('SELECT * FROM `objects`');
 
         return results;
@@ -19,10 +19,10 @@ class ObjectRepository implements IRepository<CMSObject> {
         return this._objects.find(condition);
     }
 
-    getById(id: number): CMSObject {
-        console.log(id);
-        
-        return new CMSObject();
+    async getById(id: number): Promise<CMSObject> {
+        const result = await SqliteService.single<CMSObject>('SELECT * FROM `objects` WHERE `id` = ?', [id]);
+
+        return result;
     }
 
     insert(item: CMSObject) {

@@ -41,15 +41,19 @@ class SqliteService {
         });
     }
 
-    static single<T extends IStorable>(query: string, callback: (row: T) => void, [...params]) {
-        if(!this._db)
-            throw new SqliteError('Could not query; database not instantiated.');
-        
-        this._db.get(query, params, (err, row) => {
-            if(err)
-                throw new SqliteError(`Could not query: ${err}`);
+    static async single<T extends IStorable>(query: string, [...params]): Promise<T> {
+        const self = this;
 
-            callback(row as T);
+        return new Promise<T>(function(resolve) {
+            if(!self._db)
+                throw new SqliteError('Could not query; database not instantiated.');
+            
+            self._db.get(query, params, (err, row) => {
+                if(err)
+                    throw new SqliteError(`Could not query: ${err}`);
+                
+                resolve(row as T);
+            });
         });
     }
 
