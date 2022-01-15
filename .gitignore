@@ -3,7 +3,7 @@
 .husky/
 .vscode/
 release/
-storage/
+generated/
 
 # Logs
 logs
