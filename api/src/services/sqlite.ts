@@ -1,11 +1,12 @@
 import fs from 'fs/promises';
 import { constants } from 'fs';
+import config from '../../../config/setup.json';
 import sqlite3 from 'sqlite3'
 import SqliteError from '../errors/sqlite.error';
 import IStorable from '../models/istorable';
 
 class SqliteService {
-    private static _path = './generated/storage.db';
+    private static _path = config.api.database_path;
     private static _db?: sqlite3.Database;
     private static _isOpen: boolean = false;
 
