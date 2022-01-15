@@ -1,0 +1,6 @@
+{
+    "api": {
+        "database_path": "./generated/storage.db",
+        "port": 3001
+    }
+}
