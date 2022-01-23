@@ -1,22 +1,16 @@
-import HomePage from 'pages/home.page';
 import { MemoryRouter as Router, Switch } from 'react-router-dom';
-// import HomePage from 'pages/home';
-// // import './bootstrap.min.css';
-// import './App.css';
-// import Navigation from '../../src/components/navigation';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Typography } from '@mui/material';
+import Navigation from './components/navigation';
 
-function App () {
+function App() {
   return (
     <Router>
       <Switch>
         <>
-        <HomePage />
-          {/* <Navigation />
-          <Route path="/" component={HomePage} />
-          {/* <Route exact path="/" component={HomePage} />
-          <Route path="/objects" component={ObjectsRouter} />
-          <Route path="/settings" component={SettingsPage} />
-          <Route path="/help" component={HelpPage} /> */}
+          <CssBaseline />
+          <Navigation />
+          <Typography>test</Typography>
         </>
       </Switch>
     </Router>

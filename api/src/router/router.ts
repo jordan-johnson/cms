@@ -6,6 +6,7 @@ export type ExpressRouterDef = (req: Request, res: Response, next?: NextFunction
 
 class CMSRouter {
     private _express: express.Application;
+
     private _controllers: IController[];
 
     constructor(expressDependency: express.Application) {

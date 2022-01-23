@@ -1,6 +1,6 @@
-import IRepository from "./irepository";
-import CMSObject from "../models/cms.object";
-import SqliteService from "../services/sqlite";
+import IRepository from './irepository';
+import CMSObject from '../models/cms.object';
+import SqliteService from '../services/sqlite';
 
 class ObjectRepository implements IRepository<CMSObject> {
     private _objects: CMSObject[];

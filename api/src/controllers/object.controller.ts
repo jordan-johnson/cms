@@ -5,6 +5,7 @@ import ObjectRepository from '../repositories/object.repository';
 
 class ObjectController implements IController {
     name: string;
+
     router: Router;
 
     private _repo: ObjectRepository;
@@ -27,12 +28,12 @@ class ObjectController implements IController {
                 const results = await repository.getAll();
 
                 res.status(200).json(results);
-            } catch(e) {
+            } catch (e) {
                 res.status(500).send(
                     `Something went wrong fetching from database. Returned: ${e}`
                 );
             }
-        }
+        };
     }
 
     private getObjectById(repository: ObjectRepository): ExpressRouterDef {
@@ -47,7 +48,7 @@ class ObjectController implements IController {
                     `Something went wrong fetching from database. Returned: ${e}`
                 );
             }
-        }
+        };
     }
 }
 

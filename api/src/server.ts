@@ -4,7 +4,7 @@ import SqliteService from './services/sqlite';
 import CMSRouter from './router/router';
 
 const api = express();
-const {port} = config.api;
+const { port } = config.api;
 const router = new CMSRouter(api);
 
 SqliteService.open();

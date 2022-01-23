@@ -1,43 +1,39 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, Divider } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+
+const useStyles = makeStyles({
+  paper: {
+    width: 250
+  }
+});
 
 const Navigation = () => {
+  const classes = useStyles();
+  const [display, setDisplay] = useState(false);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
-        <ul className="navbar-nav me-auto">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/objects" className="nav-link">
-              Objects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/settings" className="nav-link">
-              Settings
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/help" className="nav-link">
-              Help
-            </Link>
-          </li>
-        </ul>
-        <form className="d-flex">
-          <input
-            className="form-control me-sm-2"
-            type="text"
-            placeholder="Search everything..."
-          />
-          <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
+    <>
+      <AppBar >
+        <Toolbar>
+          <IconButton onClick={() => setDisplay(true)}>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer anchor="left" open={display} onClose={() => setDisplay(false)} classes={{ paper: classes.paper }}>
+        <List>
+          <ListItem button>
+            <HomeIcon />
+            <ListItemText primary="Home" />
+          </ListItem>
+          <Divider />
+        </List>
+      </Drawer>
+    </>
   );
 };
 

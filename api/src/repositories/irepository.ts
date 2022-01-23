@@ -1,4 +1,4 @@
-import IStorable from "../models/istorable";
+import IStorable from '../models/istorable';
 
 interface IRepository<T extends IStorable> {
     getAll(): Promise<T[]>;
